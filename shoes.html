@@ -2,15 +2,18 @@
 <html lang="en">
 
 <head>
+  <title>E-Duka Shoes </title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <title>SHOES</title>
+  <link rel="icon" href="/images/icon.jpg" type="image/x-icon">
+  <script type="text/javascript" src="javascript/script.js" ></script>
 </head>
 
-<body>
+
+<body onload=initCart()>
 
   <br>
   <hr>
@@ -32,26 +35,49 @@
             <a class="nav-link btn btn-outline-primary" href="home.html">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary" href="watch.html" >Watch</a>
+            <a class="nav-link btn btn-outline-primary" href="shoes.html" >Shoes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary" href="phones.html" >Phones</a>
+            <a class="nav-link btn btn-outline-primary" href="watch.html" >Watch</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-outline-primary" href="bag.html"  >Bag</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary" href="shoes.html" >Shoes</a>
+            <a class="nav-link btn btn-outline-primary" href="phones.html" >Phones</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-primary" href="form.html" t >Contact us</a>
-          </li>
+          
         </ul>
       </div>
+
+     <a class="navbar-brand" href="/"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+		aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	 	 </button>
+      <div class="collapse  d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id="navbarNav">
+        
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link btn btn-outline-primary" href="cart.html">Open Cart</a>
+            </li>
+        </ul>
+      </div>
+
     </nav>
   </div>
 
+  <div class="container catagories">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="ctg3 d-flex justify-content-between align-items-center">
+          <h1>Shoes</h1>
+          <img src="images/categories/shoes.png" alt="">
+        </div>
+      </div>
 
+      
+    
 
   <nav class="navbar navbar-expand-lg bg-danger bg-white">
     <a class="navbar-brand" href="/">
@@ -61,22 +87,23 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id="navbarNav">
+    <div class="collapse  d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm" id="navbarNav">
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-primary" href="#men">Men's Section</a>
+          <a class="nav-link navbar-collapse btn btn-outline-primary" href="#men">Men's Section</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link btn btn-outline-primary" href="#women">Women's Section</a>
+          <a class="nav-link navbar-collapse btn btn-outline-primary" href="#women">Women's Section</a>
         </li>
       </ul>
     </div>
   </nav>
+ </div>
+</div>
 
-
-
+  
 
 
 
@@ -84,27 +111,28 @@
     <h3>Men's Shoes</h3>
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/shoe-1.png" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe1.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Supply 350</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+          <p class="card-text" >This is a wider card with supporting text below as a natural lead-in to additional
             content. This card has even longer content than the first to show that equal height action.</p>
-          <h5>Kshs. 2,200</h5>
-          <button class="buy-now-button">Buy This>></button>
+            <div class="card-footer">        
+            <h5>Kshs. 2,200</h5>
+          <button class="buy-now-button" type="button" onclick="addToCart(shoe1)">Buy This>></button></div> 
         </div>
       </div>
       <div class="card bd">
-        <img src="images/shoes/shoe-2.png" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe2.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Nike 350</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
             content. This card has even longer content than the first to show that equal height action.</p>
           <h5>Kshs. 3,200</h5>
-          <button class="buy-now-button">Buy This>></button>
+          <button class="buy-now-button" type="button" onclick="addToCart(shoe2)">Buy This>></button>
         </div>
       </div>
       <div class="card bd">
-        <img src="images/shoes/shoe-3.png" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe3.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Red Airmax</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -121,7 +149,7 @@
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/shoe-4.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe4.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike4</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -132,7 +160,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/shoe-5.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe5.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike5</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -143,7 +171,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/shoe-6.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe6.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike6</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -160,7 +188,7 @@
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/shoe-7.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe7.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br><br>Black Nike7</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -171,7 +199,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/shoe-8.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe8.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike8</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -182,7 +210,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/shoe-9.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe9.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike9</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -194,12 +222,12 @@
 
     </div>
   </div>
-
+<!--
   <div class="container" id="shoes">
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/shoe-10.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe10.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -210,7 +238,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/shoe-11.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe11.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -221,7 +249,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten14.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe12.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Virgil Abloh Nike 12</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -233,11 +261,13 @@
 
     </div>
   </div>
+
+-->
   <div class="container" id="shoes">
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten17.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe13.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -248,7 +278,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten18.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe14.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -259,7 +289,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten19.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe15.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -276,7 +306,7 @@
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten20.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe16.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -287,7 +317,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/virgil-abloh-nike-theten21.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe17.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -298,7 +328,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/nikeairforce.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe18.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -312,11 +342,13 @@
     </div>
   </div>
  
+<!--
+
   <div class="container" id="shoes">
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/nike-1.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe19.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -327,7 +359,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/nike-2.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe20.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -338,7 +370,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/nike-3.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe21.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -350,7 +382,7 @@
 
     </div>
   </div>
- 
+-->
  
   <div class="container shoes" id="women">
     <h3>Women's Shoes</h3>
@@ -358,7 +390,7 @@
   
       <div class="card bd">
         <br><br><br>
-        <img src="images/shoes/women-1.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe22.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br><br><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -369,7 +401,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/women-2.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe23.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -380,7 +412,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/women-3.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe24.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -397,7 +429,7 @@
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/women-4.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe25.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -408,7 +440,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/women-5.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe26.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -419,7 +451,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/women-6.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe27.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -436,7 +468,7 @@
     
     <div class="card-deck">
       <div class="card bd">
-        <img src="images/shoes/women-7.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe28.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -447,7 +479,7 @@
       </div>
       
       <div class="card bd">
-        <img src="images/shoes/women-8.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe29.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -458,7 +490,7 @@
       </div>
 
       <div class="card bd">
-        <img src="images/shoes/women-9.jpg" class="card-img-top" alt="...">
+        <img src="images/shoes/shoe30.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><br>Black Nike</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -472,6 +504,16 @@
   </div>
  
   
+
+  <hr>
+  <footer class="my-5 pt-5 text-muted text-center text-small">
+    <p class="mb-1">&copy; 2021 E-Duka </p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
 
 </body>
 </html>
